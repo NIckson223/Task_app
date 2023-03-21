@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="header_elements">
+                <nav>
+                    <a href="{% url 'home'%}">
+                        <div class="header_element">Home</div>
+                    </a><a href="{% url 'tasks'%}">
+                        <div class="header_element">Task</div>
+                    </a><a href="{% url 'about'%}">
+                        <div class="header_element">About</div>
+                    </a><a href="">
+                        <div class="header_element">Contact</div>
+                    </a>
+                </nav>
+        
+            </div>
+        </div>
+
+    </header>
+    <section>
+        <div class="wrap">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>

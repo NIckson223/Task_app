@@ -1,0 +1,66 @@
+{%extends 'main/base.html' %}
+
+{%block title%}
+Tasks
+{% endblock %}
+
+
+{%block content%}
+    {% if tasks %}
+        <div class="task_wrap">
+            <div class="task_elements">
+                {% for el in tasks %}
+                    <div class="task_element">
+                        <div class="task_header">
+                            <h3>{{ el.title }}</h3>
+                        </div>
+                        <div class="task_descrip">
+                            <p>{{ el.description}}</p>
+                        </div>            
+                        <div class="task_date"> 
+                            <div>Start: {{el.date}}</div> 
+                            {% if el.date_end %} <div> Deadline: {{el.date_end}}</div> {% endif%}</p>
+                        </div>
+                        <div class="task_btns">
+                            <a href="" class="task_btn">
+                                <div class="task_btn" id="complete">Complete</div>
+                            </a>
+                          
+                            <a href="" class="task_btn">
+                                <div class="task_btn" id="delete">Delete</div>
+                            </a>
+                        
+                        </div>
+                    </div>
+                {% endfor%}
+            </div>
+            <div>    
+                <div class="btn_crtask">
+                    <a href="{% url 'create'%}">
+                        <div class="">
+                            Create task
+                        </div>
+                    </a>
+                </div>
+                <div class="btn_crtask">
+                    <a href="{% url 'delete_tasks'%}">
+                        <div class="">
+                            Delete all task
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="task_empty">
+            <h3>You haven`t tasks</h3>
+            <div class="btn_crtask">
+                <a href="{% url 'create'%}">    
+                    <div class="">
+                        Create task
+                    </div>
+                </a>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

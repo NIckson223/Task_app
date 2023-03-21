@@ -1,0 +1,281 @@
+h3,p,h1,h2{
+    margin: 0px;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background: #2e2e2e;
+    color:#fff;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    text-decoration-color: #fff;
+}
+
+
+:root{
+    --max-width: 900px;
+    --bgh-color:rgb(65, 63, 206);
+    --btn-hover:rgb(255, 106, 0);
+}
+
+
+header{
+    background: rgb(0, 0, 0);
+    
+}
+
+div.header,div.wrap,div.footer{
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+div.header{
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    margin: auto;
+    
+}
+
+.header_elements>nav{
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.header_element{
+    padding: 20px;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 32px;
+}
+
+
+.header_element:hover{
+    color: antiquewhite;
+    background: rgb(255, 106, 0);
+}
+
+/* Home Prewiew*/
+.home_preview{
+    margin: 20% auto auto auto;
+    text-align: center;
+    font-size: 42px;
+    color: #fff;
+}
+
+
+
+/* Task style*/
+
+.task_wrap{
+    display: flex;
+
+}
+.task_elements{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.task_element{
+    width: 80%;
+    color:#fff;
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 0px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    /*border: 1px solid rgb(246, 246, 246);*/
+
+    box-shadow: 10px 5px 5px #ff7300;
+}
+
+.task_header{
+    color: #fff;
+    padding: 10px 0px 10px;
+}
+.task_descrip{
+    font-size: 18px;
+    padding-bottom: 30px;
+}
+
+
+div.task_date{
+    color: antiquewhite;
+    padding: 14px 0px 8px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid  rgb(226, 226, 226);
+    border-bottom: 1px solid  rgb(226, 226, 226);
+}
+
+div.task_date>div{
+    text-align: right;
+    margin-right: 0px;
+}
+
+.task_empty{
+    width: 100%;
+    padding-top: 20%;
+    font-size: 48px;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+}
+
+.btn_crtask{
+    margin: 28px auto;
+    width: 40%;
+    font-size: 18px;
+    background: #000;
+    padding: 20px 22px;
+    border-radius: 10px;
+}
+.btn_crtask>a{
+    text-decoration-color: #fff;
+    color: #fff;
+
+}
+
+.btn_crtask:hover{
+    background: var(--btn-hover);
+    color:antiquewhite;
+  
+}
+
+.task_wrap>div>div.btn_crtask{
+    
+    color: #fff;
+    font-size: 14px;
+    width: 80%;
+    padding: 10px 16px;
+}
+
+.task_wrap>div>div.btn_crtask:hover{
+    color:antiquewhite;
+}
+
+.task_btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.task_btns>a{
+    width: 100%;
+    
+
+}
+
+.task_btn{
+    display:flex;
+    width: 100%;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 4px 0px;
+}
+
+
+/* !TODO  Create html styles    */
+
+.create_header{
+    padding-top: 26px;
+    font-size: 36px;
+    text-align: center;
+    border-bottom:  solid rgb(226, 226, 226)0 ;
+}
+
+.create_form{
+    margin: 20px auto auto;
+}
+
+.create_form>form{
+    display: flex;
+    flex-direction: column;
+}
+
+.create_wrap{
+    margin: auto;
+    width: 50%;
+}
+.create_wrap>form>div{
+    display: flex;
+    flex-direction: column;
+
+}
+.task_btn:hover #complete{
+    background: green;
+}
+.task_btn:hover #delete{
+    background: red;
+}
+
+
+
+/* Inputs styles*/
+.input_label{
+    padding: 10px 0px 0px;    
+}
+
+.input{
+    font-family: inherit;
+    outline:0;
+    border-radius: 0px 10px 10px 10px;
+    border: 1px solid var(--btn-hover);
+    margin-top: 16px;;
+    background: #000;
+}
+
+.input_name{
+    justify-content: center;
+    padding: 8px 10px;
+    border: 1px solid var(--btn-hover);
+    font-size: 16px;
+    width: 80%;
+    color:antiquewhite;
+    
+}
+
+.input_description{
+    color:antiquewhite;
+   
+}
+
+.input_date{
+    font-size: 16px;
+    padding: 10px 12px; 
+    height: 10%;
+    text-align: center;
+    background-color: #000;
+    background: #000;
+    color:antiquewhite;
+}
+.input_date:focus{
+    background: #000;
+    color:antiquewhite;
+    
+}
+
+.input_btn{
+    margin-top: 16px;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 22px;
+    width: 100%;
+}
+
+.input_btn:hover{
+    
+    background: var(--btn-hover);
+    color: antiquewhite;
+}

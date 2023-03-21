@@ -1,0 +1,37 @@
+{%extends 'main/base.html' %}
+
+{%block title%}
+Create Task
+{% endblock %}
+
+
+{%block content%}
+<div class="create_header">
+    <h3>Create Task</h3>
+</div>
+<div class="create_form">
+    <div class="create_wrap">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div>
+                <span class="input_label">{{ error }}</span>
+                <span class="input_label">Task name</span>
+                {{form.title}}
+            </div>
+            <div>
+                <span class="input_label"> Task description</span>
+                {{ form.description }}
+            </div>
+            <div>
+                <span class="input_label"> Task date start</span>
+                {{ form.date }}
+            </div>
+            <div>
+                <span class="input_label"> Task date deadline</span>
+                {{ form.date_end }}
+            </div>
+            <button type="submit" class="input_btn input"> Create</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

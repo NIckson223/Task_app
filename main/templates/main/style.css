@@ -1,0 +1,49 @@
+a{
+    text-decoration: none;
+}
+
+
+:root{
+    --max-width: 1200px;
+}
+
+
+header{
+    background: rgb(65, 63, 206);
+    
+}
+
+div.header, div.wrap,div.footer{
+    max-width: var(--max-width);
+    margin: auto;
+    
+}
+
+div.header{
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    margin: auto;
+    
+}
+
+.header_elements>nav{
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.header_element{
+    padding: 20px;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 32px;
+}
+
+
+.header_element:hover{
+    color: antiquewhite;
+    background: rgb(74, 71, 238);
+}
+
